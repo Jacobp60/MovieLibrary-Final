@@ -75,9 +75,10 @@ namespace MovieLibraryEntities.Dao
                     }
 
                     newuser.Age = userAge;
+                var userGender = "";
                     Console.WriteLine("Enter user gender (M/F): ");
-                    var userGender = Console.ReadLine().Substring(0, 1).ToUpper();
-                    if (userGender != "M" || userGender != "F")
+                    userGender = Console.ReadLine().Substring(0, 1).ToUpper();
+                    if (userGender != "M" && userGender != "F")
                     {
                         Console.WriteLine("Please Enter a valid Gender input");
                         Console.WriteLine("Enter user gender (M/F): ");
@@ -170,7 +171,7 @@ namespace MovieLibraryEntities.Dao
                     }
                     else if(userDecision == "n")
                     {
-                        Console.WriteLine("Going back to M  enu\n");
+                        Console.WriteLine("Going back to Menu\n");
                     }
                 }
             }
